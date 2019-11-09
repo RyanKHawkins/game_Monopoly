@@ -57,3 +57,17 @@ Setup Player class:
 
 Starting bank
 """
+
+class Player:
+    def __init__(self, name, money = 1500):
+        self.money = 1500
+        self.name = name
+
+    def __str__(self):
+        return f"Player {self.name}"
+
+players = []
+num_players = int(input("How many people are playing?  "))
+for i in range(num_players):
+    player = Player(f"Player {i}")
+print(players)
