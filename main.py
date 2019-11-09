@@ -63,7 +63,13 @@ class Player:
     def __str__(self):
         return f"Player {self.name}"
 
+    def generate_player(i):
+        return Player(f"{i}")
 
-num_players = ""
-while not num_players.isdigit():
-    num_players = input("How many players?:  ")
+def main():
+
+    num_players = int(input("How many players?:  "))
+    for i in range(num_players):
+        players.append(Player.generate_player(i))
+
+main()
