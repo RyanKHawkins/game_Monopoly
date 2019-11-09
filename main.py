@@ -2,9 +2,7 @@
 # Author:  Ryan Hawkins
 # Updated:  2019-11-08
 
-
 # Goal:  Create a Python version of Monopoly.
-
 """
 Gameplay
 
@@ -23,8 +21,6 @@ Passing go
 
 
 """
-
-
 """
 Layout each property
     Cost
@@ -41,7 +37,6 @@ Community Chest
 Create cards.
 
 """
-
 """
 Special spots
 
@@ -51,23 +46,24 @@ Railroads
 Jail
 
 """
-
 """
 Setup Player class:
 
 Starting bank
 """
+players = []
+
 
 class Player:
-    def __init__(self, name, money = 1500):
+    def __init__(self, name, money=1500):
         self.money = 1500
         self.name = name
+        players.append(self.name)
 
     def __str__(self):
         return f"Player {self.name}"
 
-players = []
-num_players = int(input("How many people are playing?  "))
-for i in range(num_players):
-    player = Player(f"Player {i}")
-print(players)
+
+num_players = ""
+while not num_players.isdigit():
+    num_players = input("How many players?:  ")
