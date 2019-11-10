@@ -61,15 +61,22 @@ class Player:
         players.append(self.name)
 
     def __str__(self):
-        return f"Player {self.name}"
+        return self.name
 
-    def generate_player(i):
-        return Player(f"{i}")
+    def display_self(self):
+        print(f"{self.name}")
+        print(f"${self.money}")
+
+    def set_players():
+        players = []
+
+        new_player = input("What's your name?\n")
+        new_player = Player(new_player)
+        players.append(new_player)
+        return players
 
 def main():
 
-    num_players = int(input("How many players?:  "))
-    for i in range(num_players):
-        players.append(Player.generate_player(i))
+    Player.set_players()
 
 main()
